@@ -1,0 +1,21 @@
+body{
+	background: url(http://static1.squarespace.com/static/5370fd82e4b0f1679c03978d/t/548b25f5e4b02f0691cbb6c2/1418405366316/6769877431_c0df769478_b.jpg?format=1500w);
+}
+h1{
+	color: rgb(50,230,180);
+}
+h3{
+	color: rgb(30,180,70);
+	border: 1px solid red;
+}
+
+input[type="checkbox"]{
+/*	color: #901520;   
+	border: 1px solid red;
+	background: blue;*/
+	outline: 2px solid green;
+	outline-style: 
+}
+li {
+	color: #B05020
+}

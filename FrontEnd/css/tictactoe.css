@@ -1,0 +1,27 @@
+h1{
+	background: #0088cc;
+	text-align: center;
+}
+table{
+	align: center;
+	border-collapse: collapse;
+	margin: auto;
+}
+td {
+	width: 100px;
+	height: 100px;
+	text-align: center;
+	color: white;
+}
+tr:nth-of-type(1) td{
+	border-bottom:  1px solid black;
+}
+tr:nth-of-type(2) td{
+	border-bottom:  1px solid black;
+}
+tr td:nth-of-type(1) {
+	border-right:  1px solid black;
+}
+tr td:nth-of-type(2) {
+	border-right:  1px solid black;
+}
