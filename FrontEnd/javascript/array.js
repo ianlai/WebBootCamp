@@ -45,8 +45,8 @@ console.log(colors.indexOf("puple"))
 //subarray 
 console.log("----- slice -----")
 console.log(colors)
-favoriteColors = colors.slice(1,3)
-console.log(colors)  //original array is not effected
+favoriteColors = colors.slice(1,3
+)console.log(colors)  //original array is not effected
 console.log(favoriteColors)
 
 
