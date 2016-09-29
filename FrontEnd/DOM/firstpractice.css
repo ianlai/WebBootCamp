@@ -1,0 +1,13 @@
+h1 {
+    color: grey;
+    border: 2px solid purple;
+}
+
+.big {
+    font-size: 100px;
+}
+
+.emphasize {
+    color: red;
+    border: 1px solid purple;
+}
