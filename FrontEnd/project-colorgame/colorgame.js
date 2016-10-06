@@ -25,6 +25,7 @@ function reset() {
     colorDisplay.textContent = pickedColor;
     setSquaresDisplay();
     messageDisplay.textContent = "";
+    h1.style.background = "rgb(62,1,175)";
 }
 function setSquaresListener() {
     for (var i = 0; i < squares.length; i++) {
