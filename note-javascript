@@ -1,0 +1,91 @@
+# basic javascript 
+
+### hoisting
+	function declaration  //do 
+	function expression   //not do 
+
+### String 
+	var sArr = origin.split('');  //separte
+	var sOut = sArr.join('--');   //combine
+
+	s.slice(2);  //substring
+	s[2];        //char
+
+### Stack and Heap 
+	Stack
+	- run function will put the function into the stack 
+	- there is a main 
+	
+	Heap
+	- store data (only when creating)
+	-assigning the reference will not using more memory 
+
+### Async 
+	- setTimeout(callback, delay)  //set
+		var id = setTimeout;
+		clearTimeout(id);  //clear
+
+	- setInterval(callback, repeat) 
+
+
+### Event loop & Queue
+	1. What are they
+	2. What they work with stack
+	3. JS is a single thread language 
+
+	- Queue will be pull out only when nothing on the stack   !!!
+	- setTimeout will put the function into the queue after the delay time    //not stack
+	- setTimeout itself is put in the stack 
+
+	Ex. 
+	setTimeout(function(){
+		console.log("inside");  //second (queue will not be pull out until finishing the stack)
+	}, 0); 
+	for(var i=0;i<1000000000;i++){
+		var t=i*2;
+	}
+	console.log("outside");     //first
+
+### Promise
+	var p = new Promise(function(resolve, reject){
+		var sec = 3; 
+		/* Async function. Here might be something else like Ajax request. */ 
+		setTimeout(function(){
+			console.log("After " + sec + " seconds."); 
+			var rand = Math.floor(Math.random()*100);
+			if(rand>70){
+				resolve(rand);
+			}else{
+				reject(rand);
+			}
+		}, sec*1000);
+	});
+	p.then(function(result){
+		console.log("Success: " + result);   //after the async function finished (success)
+
+	}).catch(function(error){
+		console.log("Error: " + error);      //after the async function finished (error)
+	});
+	console.log("Main function");   //first 
+
+### Promise vs Callback
+	- After a is done, doing b, and after b is done, doing c. 
+	- We use setTimeout and makes it mean "done" after specific time. 
+	- In many cases, we use some async call without know when it will be finished.
+	- Promise can be chained (action), but they need to use new Promise! (differnet from what I thought)  //return 
+	- Promise can also chain the data (output becomes the input of the next async function)               //resolve
+	- In Ajax, actually we dont create our own promise. We just use the Promise such like Fetch. 
+
+### Array methods
+	- forEach //run callback on the original array ; return undefine 
+	- map     //create a new array and run callback on each one in the new array
+	- filter 
+	- some
+	- every
+	- reduce  //accumulated
+
+### Closure 
+	- With closure, we can simulate the private member. 
+	- Closure exists when inner function use the variable defined in outside function and has been return 
+	- Two different var can have different spaces (data will be independant) if using closure
+	- NOTE: Actually we can directly manipulate other's data. So we use slice() to prevent this. 

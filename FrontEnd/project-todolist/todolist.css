@@ -1,0 +1,13 @@
+body{
+	background-color: #ccffee;
+	font-family: "Avenir";
+}
+#container{
+	margin: 0 auto;
+	width: 600px;
+	border: 1px solid black;
+}
+.done{
+	text-decoration: ;
+	color: gray;
+}
